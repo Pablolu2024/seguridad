@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparación de caras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <video id="video" autoplay></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <button id="capture">Capturar foto</button>
+    <button id="compare">Comparar con referencia</button>
+    <img id="referenceImage" src="img1.png" alt="Imagen de referencia">
+  </div>
+  <script src="face-api.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
