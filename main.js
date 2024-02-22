@@ -64,7 +64,7 @@ document.getElementById('compare').addEventListener('click', function() {
       console.log("Distancia euclidiana: " + distance);
 
       // Puedes definir un umbral para determinar si es la misma persona o no
-      var threshold = 0.6; // Este valor puede variar según tus necesidades
+      var threshold = 0.7; // Este valor puede variar según tus necesidades
       if (distance < threshold) {
         audio.play();
         alert ("Es la misma persona.");
