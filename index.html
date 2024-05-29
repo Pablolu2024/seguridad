@@ -1,20 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparación de caras</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>El Conocimiento es Poder: ¡Empieza Hoy Mismo!</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-  <div class="container">
-    <video id="video" autoplay></video>
-    <canvas id="canvas" width="640" height="480"></canvas>
-    <button id="capture">Capturar foto</button>
-    <button id="compare">Comparar con referencia</button>
-    <img id="referenceImage" src="img1.png" alt="Imagen de referencia">
-  </div>
-  <script src="face-api.min.js"></script>
-  <script src="main.js"></script>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+            <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="flaticon-002-bricks"></i>
+                <span class="text-primary">Innovar</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                </div>
+                <a href="index.html" class="btn btn-primary px-4">Inicio</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left">
+                <h4 class="text-white mb-4 mt-5 mt-lg-0">Centro de Aprendizaje</h4>
+                <h1 class="display-3 font-weight-bold text-white">Nuevo enfoque para la educación</h1>
+                <p class="text-white mb-4">En Innovar, creemos en un nuevo enfoque para la educación. Nuestro objetivo es proporcionar una experiencia de aprendizaje innovadora y personalizada que se adapte a las necesidades y aspiraciones de cada estudiante. Ofrecemos una amplia variedad de cursos diseñados para potenciar tus habilidades, expandir tus conocimientos y abrir nuevas oportunidades en tu carrera profesional. Únete a nosotros y descubre cómo la educación puede ser transformadora, accesible y emocionante.</p>
+                <a href="index.html" class="btn btn-secondary mt-1 py-3 px-5">Inicio</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <img class="img-fluid mt-5" src="img/header.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Facilities Start -->
+    <div class="container-fluid pt-5">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-041-abacus h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Pensamiento Crítico y Resolución de Problemas</h4>
+                            <p class="m-0">Fomentar la capacidad de analizar situaciones complejas y encontrar soluciones innovadoras mediante el uso de la robótica y la inteligencia artificial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-014-blackboard h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Habilidades de Programación y Codificación</h4>
+                            <p class="m-0">Desarrollar competencias en diversos lenguajes de programación, esenciales para construir algoritmos eficientes y software robusto en proyectos de robótica e inteligencia artificial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-039-seesaw h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Diseño y Construcción de Sistemas Robóticos</h4>
+                            <p class="m-0">Enseñar a los estudiantes cómo diseñar, construir y programar robots, abarcando desde la mecánica hasta la integración de sensores y actuadores.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-032-book h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Conocimientos en Aprendizaje Automático y Data Science</h4>
+                            <p class="m-0">Proporcionar una comprensión profunda de las técnicas y herramientas de aprendizaje automático, incluyendo el procesamiento de datos, la creación de modelos predictivos y la implementación de algoritmos de IA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-011-mat h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Trabajo en Equipo y Proyectos Colaborativos</h4>
+                            <p class="m-0">Fomentar habilidades de colaboración y comunicación efectiva a través de proyectos grupales, donde los estudiantes trabajan juntos para diseñar y desarrollar soluciones tecnológicas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <i class="flaticon-042-synthesizer h1 font-weight-normal text-primary mb-3"></i>
+                        <div class="pl-4">
+                            <h4>Innovación y Creatividad Tecnológica</h4>
+                            <p class="m-0">Inspirar a los estudiantes a aplicar su creatividad en la tecnología, promoviendo la invención de soluciones únicas y efectivas en el ámbito de la robótica y la inteligencia artificial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilities Start -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="img/about-1.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <p class="section-title pr-5"><span class="pr-2">Aprende sobre nosotros</span></p>
+                    <h1 class="mb-4">El mejor centro para su aprendizaje</h1>
+                    <p>En Innovar, estamos comprometidos con la excelencia educativa y la innovación tecnológica. Nuestro enfoque se centra en proporcionar a los estudiantes las herramientas y conocimientos necesarios para sobresalir en los campos de la robótica, la inteligencia artificial y la programación.</p>
+                    <div class="row pt-2 pb-4">
+                        <div class="col-6 col-md-4">
+                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                        </div>
+                        <div class="col-6 col-md-8">
+                            <ul class="list-inline m-0">
+                                <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>Educación Personalizada.</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Aprendizaje Práctico.</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Innovación Continua.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="index.html" class="btn btn-primary mt-2 py-2 px-4">Inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Class Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Nuestros Cursos</span></p>
+                <h1 class="mb-4">Cursos 2024</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Curso de Robótica</h4>
+                            <p class="card-text">Descubre el emocionante mundo de la robótica y aprende a construir y programar tus propios robots. En este curso, los estudiantes explorarán los fundamentos de la mecánica y la electrónica, diseñando robots que pueden moverse, detectar su entorno y realizar tareas específicas. A través de proyectos prácticos y divertidos, desarrollarás habilidades en resolución de problemas y pensamiento crítico, preparándote para futuros desafíos tecnológicos.</p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Edad</strong></div>
+                                <div class="col-6 py-1">12 - 15 años</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Cupos</strong></div>
+                                <div class="col-6 py-1">10 Cupos</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Horario</strong></div>
+                                <div class="col-6 py-1">15:00 - 16:00 Lunes a Viernes</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><strong>Costo</strong></div>
+                                <div class="col-6 py-1">$30 / Mes</div>
+                            </div>
+                        </div>
+                        <a href="index.html" class="btn btn-primary px-4 mx-auto mb-4">Inicio</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="img/class-2.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Curso de Inteligencia Artificial</h4>
+                            <p class="card-text">Adéntrate en el fascinante campo de la inteligencia artificial y aprende cómo las máquinas pueden "pensar" y "aprender". Este curso introductorio está diseñado para explicar conceptos clave de la IA de manera accesible y atractiva para jóvenes estudiantes. A través de ejemplos interactivos y actividades prácticas, comprenderás cómo se utilizan los algoritmos de aprendizaje automático en aplicaciones cotidianas y empezarás a crear tus propios proyectos de IA.</p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Edad</strong></div>
+                                <div class="col-6 py-1">12 - 15 años</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Cupos</strong></div>
+                                <div class="col-6 py-1">10 Cupos</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Horario</strong></div>
+                                <div class="col-6 py-1">16:30 - 17:30 Lunes, Martes, Miércoles</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><strong>Costo</strong></div>
+                                <div class="col-6 py-1">$30 / Mes</div>
+                            </div>
+                        </div>
+                        <a href="index.html" class="btn btn-primary px-4 mx-auto mb-4">Inicio</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="img/class-3.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Curso de Programación</h4>
+                            <p class="card-text">Empieza tu viaje en el mundo de la programación con este curso diseñado para jóvenes curiosos. Aprenderás los fundamentos de la codificación a través de lenguajes de programación amigables para principiantes, como Python y Scratch. Con ejercicios divertidos y desafiantes, desarrollarás habilidades en lógica, secuenciación y resolución de problemas, preparando el camino para futuros estudios en tecnología y desarrollo de software.</p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Edad</strong></div>
+                                <div class="col-6 py-1">12 - 15 años</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Cupos</strong></div>
+                                <div class="col-6 py-1">10 Cupos</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Horario</strong></div>
+                                <div class="col-6 py-1">16:30 - 17:30 Jueves y Viernes</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><strong>Costo</strong></div>
+                                <div class="col-6 py-1">$30 / Mes</div>
+                            </div>
+                        </div>
+                        <a href="index.html" class="btn btn-primary px-4 mx-auto mb-4">Inicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Class End -->
+
+
+    <!-- Registration Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <p class="section-title pr-5"><span class="pr-2">RESERVAR UN CUPO</span></p>
+                    <h1 class="mb-4">Reserve su cupo</h1>
+                    <p>No pierdas la oportunidad de unirte a nuestros cursos y dar el primer paso hacia un futuro brillante en tecnología. Nuestros cursos están diseñados para proporcionar una experiencia de aprendizaje interactiva y emocionante, ideal para estudiantes de 12 a 15 años.</p>
+                    <ul class="list-inline m-0">
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Completa el formulario de inscripción.</li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Pulsa el boton reservar cupo.</li>
+                        <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Recibirás una confirmación por correo electrónico con todos los detalles.</li>
+                    </ul>
+                    <a href="index.html" class="btn btn-primary mt-4 py-2 px-4">Inicio</a>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-secondary text-center p-4">
+                            <h1 class="text-white m-0">Reserve su cupo</h1>
+                        </div>
+                        <div class="card-body rounded-bottom bg-primary p-5">
+                            <form id="inscripcionForm">
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" id="nombre" name="nombre" placeholder="Nombres y apellidos completos" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control border-0 p-4" id="correo" name="correo"placeholder="Su Email" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select border-0 px-4" id="curso" name="curso" style="height: 47px;">
+                                        <option selected>Selecciona un Curso</option>
+                                        <option value="1">Curso de Robótica</option>
+                                        <option value="2">Curso de Inteligencia Artificial</option>
+                                        <option value="3">Curso de Programación</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button class="btn btn-secondary btn-block border-0 py-3" type="submit">Reservar cupo</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+        document.getElementById('inscripcionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const curso = document.getElementById('curso').value;
+
+            const data = { nombre, correo, curso };
+
+            fetch('https://script.google.com/macros/s/AKfycbwKTebgiqgYawPRZAJqYgrmo1cqPp6uBDfVIFOZBVYCQqq-UzCVXRqgjFqPiPRHOupdfw/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                alert('Datos enviados exitosamente');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error al enviar los datos');
+            });
+        });
+    </script>
+
+
+
+<!-- Registration End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Our Teachers</span></p>
+                <h1 class="mb-4">Meet Our Teachers</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="" >
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <h4>Julia Smith</h4>
+                    <i>Music Teacher</i>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="" >
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <h4>Jhon Doe</h4>
+                    <i>Language Teacher</i>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="" >
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <h4>Mollie Ross</h4>
+                    <i>Dance Teacher</i>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center team mb-5">
+                    <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="" >
+                        <div
+                            class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px;"
+                                href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <h4>Donald John</h4>
+                    <i>Art Teacher</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container p-0">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Testimonial</span></p>
+                <h1 class="mb-4">What Parents Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item px-3">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle" src="img/testimonial-1.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <div class="pl-3">
+                            <h5>Parent Name</h5>
+                            <i>Profession</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item px-3">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <div class="pl-3">
+                            <h5>Parent Name</h5>
+                            <i>Profession</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item px-3">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle" src="img/testimonial-3.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <div class="pl-3">
+                            <h5>Parent Name</h5>
+                            <i>Profession</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item px-3">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+                        Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle" src="img/testimonial-4.jpg" style="width: 70px; height: 70px;" alt="Image">
+                        <div class="pl-3">
+                            <h5>Parent Name</h5>
+                            <i>Profession</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Latest Blog</span></p>
+                <h1 class="mb-4">Latest Articles From Blog</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 shadow-sm mb-2">
+                        <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="">
+                        <div class="card-body bg-light text-center p-4">
+                            <h4 class="">Diam amet eos at no eos</h4>
+                            <div class="d-flex justify-content-center mb-3">
+                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                            </div>
+                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 shadow-sm mb-2">
+                        <img class="card-img-top mb-2" src="img/blog-2.jpg" alt="">
+                        <div class="card-body bg-light text-center p-4">
+                            <h4 class="">Diam amet eos at no eos</h4>
+                            <div class="d-flex justify-content-center mb-3">
+                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                            </div>
+                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 shadow-sm mb-2">
+                        <img class="card-img-top mb-2" src="img/blog-3.jpg" alt="">
+                        <div class="card-body bg-light text-center p-4">
+                            <h4 class="">Diam amet eos at no eos</h4>
+                            <div class="d-flex justify-content-center mb-3">
+                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                            </div>
+                            <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                            <a href="" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0" style="font-size: 40px; line-height: 40px;">
+                    <i class="flaticon-043-teddy-bear"></i>
+                    <span class="text-white">KidKinder</span>
+                </a>
+                <p>Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr stet diam duo eos rebum ipsum diam ipsum elitr.</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Get In Touch</h3>
+                <div class="d-flex">
+                    <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Address</h5>
+                        <p>123 Street, New York, USA</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-envelope text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Email</h5>
+                        <p>info@example.com</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-phone-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Phone</h5>
+                        <p>+012 345 67890</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Quick Links</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Classes</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Teachers</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Blog</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Newsletter</h3>
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
+                            required="required" />
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn-block border-0 py-3" type="submit">Submit Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, .2);;">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-primary font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed
+                by
+                <a class="text-primary font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
