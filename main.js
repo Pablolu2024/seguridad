@@ -66,12 +66,10 @@ document.getElementById('compare').addEventListener('click', function() {
       // Puedes definir un umbral para determinar si es la misma persona o no
       var threshold = 0.7; // Este valor puede variar según tus necesidades
       if (distance < threshold) {
-        audio.play();
-        alert ("Es la misma persona.");
+         alert ("Es la misma persona.");
         
       } else {
-        audio1.play();
-        alert ("No es la misma persona.");
+               alert ("No es la misma persona.");
       }
     })
     .catch(function(err) {
