@@ -1,11 +1,7 @@
 
 const MODEL_URL = './models';
 
-const audio = new Audio("correcto.mp3");
-const audio1 = new Audio("error.mp3");
 
-
-  
 
 
 (async () => {
