@@ -1,7 +1,8 @@
 
 const MODEL_URL = './models';
 
-
+const audio = new Audio("correcto.mp3");
+const audio1 = new Audio("error.mp3");
 
 
 (async () => {
@@ -55,10 +56,12 @@ context.drawImage(video, 0, 0, canvas.width, canvas.height);
       // Puedes definir un umbral para determinar si es la misma persona o no
       var threshold = 0.7; // Este valor puede variar según tus necesidades
       if (distance < threshold) {
-         alert ("Es la misma persona.");
+         audio.play();
+          alert ("Es la misma persona.");
         
       } else {
-               alert ("No es la misma persona.");
+          audio1.play();     
+          alert ("No es la misma persona.");
       }
     })
     .catch(function(err) {
