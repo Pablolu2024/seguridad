@@ -1,4 +1,4 @@
-#referenceImage img{
+#referenceImage {
     display: none;
 }
 const MODEL_URL = './models';
