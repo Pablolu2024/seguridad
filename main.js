@@ -35,10 +35,11 @@ navigator.mediaDevices.getUserMedia({ video: true })
 document.getElementById('compare').addEventListener('click', function() {
   var referenceImage = document.getElementById('referenceImage'); // Aquí debes proporcionar la imagen de referencia
   var referenceDescriptor;
-  var canvas = document.getElementById('canvas');
+  var video = document.getElementById('video');
+    var canvas = document.getElementById('canvas');
   var context = canvas.getContext('2d');
   var queryDescriptor;
-
+context.drawImage(video, 0, 0, canvas.width, canvas.height);
   // Obtener el descriptor de la imagen de referencia
   
  faceapi.detectSingleFace(referenceImage).withFaceLandmarks().withFaceDescriptor()
