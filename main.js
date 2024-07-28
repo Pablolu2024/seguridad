@@ -32,8 +32,6 @@ document.getElementById('compare').addEventListener('click', function() {
     var canvas = document.getElementById('canvas');
   var context = canvas.getContext('2d');
   var queryDescriptor;
-  
-
     
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
   // Obtener el descriptor de la imagen de referencia
