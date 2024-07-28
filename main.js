@@ -1,6 +1,3 @@
-#referenceImage {
-    display: none;
-}
 const MODEL_URL = './models';
 
 const audio = new Audio("correcto.mp3");
