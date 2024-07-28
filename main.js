@@ -24,12 +24,12 @@ navigator.mediaDevices.getUserMedia({ video: true })
   });
 
 // Capturar una foto de la cámara web
-document.getElementById('capture').addEventListener('click', function() {
+ /*document.getElementById('capture').addEventListener('click', function() {
   var video = document.getElementById('video');
   var canvas = document.getElementById('canvas');
   var context = canvas.getContext('2d');
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
-});
+}); */
 
 // Comparar la foto con la imagen de la webcam en vivo
 document.getElementById('compare').addEventListener('click', function() {
